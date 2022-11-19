@@ -1,22 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+// import './App.less';
+import {useState} from "react";
+
 
 function App() {
+  const [input, setInput] = useState('');
+
+ const onInput = (e) => {
+     setInput(e.target.value);
+ }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>To Do app for Up product</h1>
+
+          <form action="#">
+              <input className={'input'} type="text" onInput={onInput} />
+          </form>
       </header>
     </div>
   );
