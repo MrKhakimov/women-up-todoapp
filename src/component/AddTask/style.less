@@ -1,0 +1,38 @@
+.add-task {
+  background: white;
+  border-radius: 24px;
+  padding: 16px;
+  &-item {
+    width: 100%;
+    margin-bottom: 20px;
+    label {
+      margin-bottom: 12px;
+      display: block;
+      font-size: 16px;
+      & sup {
+        color: red;
+      }
+    }
+    input, textarea {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid grey;
+      padding: 12px;
+    }
+    &-img {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid grey;
+      margin-bottom: 12px;
+    }
+    &__clearBtn {
+      background: transparent;
+      border: none;
+      color: red;
+    }
+  }
+}
+.error {
+  color: red;
+}

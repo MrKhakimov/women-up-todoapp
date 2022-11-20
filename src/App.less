@@ -1,0 +1,50 @@
+body {
+  background: #f1f2f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.App-header {
+  padding: 24px;
+  & h1 {
+    color: black;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 -16px;
+}
+
+.col-1  {
+  max-width: 30%;
+  flex: 0 0 30%;
+  padding: 0 8px;
+}
+
+.col-3  {
+  max-width: 80%;
+  flex: 0 0 70%;
+  padding: 0 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+
+@media (max-width: 768px) {
+  .col-1, col-3 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+}

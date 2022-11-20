@@ -1,23 +1,29 @@
-// import './App.css';
-// import './App.less';
-import {useState} from "react";
-
+import './App.less';
+import {AddTask} from "./component/AddTask";
+import {Tasks} from "./component/Tasks";
 
 function App() {
-  const [input, setInput] = useState('');
-
- const onInput = (e) => {
-     setInput(e.target.value);
- }
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1>To Do app for Up product</h1>
 
-          <form action="#">
-              <input className={'input'} type="text" onInput={onInput} />
-          </form>
+        <div className="container">
+            <h1>To Do app for Up product</h1>
+
+            <div className={'row'}>
+                <div className={'col-1 mb-2'}>
+                    <AddTask />
+                </div>
+                <div className={'col-3 mb-2'}>
+                    <div className={'tasks'}>
+                        <h3>Задачи</h3>
+                        <Tasks />
+                    </div>
+                </div>
+            </div>
+        </div>
+
       </header>
     </div>
   );
