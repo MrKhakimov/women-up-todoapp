@@ -49,7 +49,7 @@ export const TaskItem = ({item}) => {
                 <div>
                     <button
                         className={classnames('tasks-item__button', { ['tasks-item__button--info']: complete })}
-                        onClick={updateItem}>{complete ? 'Выпелнен' : 'Активный'}</button>
+                        onClick={updateItem}>{complete ? 'Выпелнен' : 'Завершить задачу'}</button>
                     <button
                         className={'tasks-item__button tasks-item__button--danger'}
                         onClick={removeItem}>delete</button>

@@ -64,6 +64,7 @@ export const AddTask = () => {
             }).then(r  => {
                 setState(initialState)
                 setPercent(0)
+
             })
             setError(false);
         } else {
@@ -117,7 +118,7 @@ export const AddTask = () => {
                           onClick={handleFileClear}>удалить файл</button>
                   </div> :
                   <div className={'add-task-item add-task-item--image'}>
-                      <label>Прикрепите файл {file ? `${percent}%` : ''}</label>
+                      <label>Прикрепите файл {file && percent ? `${percent}%` : ''}</label>
                       <input type="file" accept="image/*" onChange={handleChange}/>
                   </div>
           }
